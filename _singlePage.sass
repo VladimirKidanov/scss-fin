@@ -1,0 +1,149 @@
+.card-slider
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 777px
+    background-color: #f7f7f7
+    border: 1px solid #eaeaea
+
+.fa-angle-left,
+.fa-angle-right
+    background-color: rgba(42, 42, 42, 0.15)
+    font-family: "Font Awesome"
+    color: $text-color-select
+    width: 47px
+    height: 47px
+    @include txt(24px, 24px, 400)
+
+.fa-angle-left:hover,
+.fa-angle-right:hover
+    color: $site-color-select
+    cursor: pointer
+    transform: scale(1.1, 1.1)
+    transition: transform 1s, color 1s
+
+.card-box
+    border: 1px solid #EAEAEA
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: -70px
+    position: relative
+    background-color: white
+    margin-bottom: 120px
+    flex-wrap: wrap
+    padding: 73px 0 122px 0
+    text-align: center
+    &__description
+        width: 642px
+        border-bottom: 1px solid #eaeaea
+        margin-bottom: 43px
+        &-title
+            text-transform: uppercase
+            color: $site-color-select
+            margin-bottom: 12px
+            @include txt(14px, 24px, 700)
+        &-line
+            height: 3px
+            width: 60px
+            background: $site-color-select
+            border: none
+            margin-left: 45%
+            margin-bottom: 17px
+        &-heading
+            text-transform: uppercase
+            @include txt(18px, 24px, 900)
+            color: $site-tcolor-darkgrey 
+            margin-bottom: 67px
+        &-text
+            @include txt(14px, 24px, 300)
+            color: #5e5e5e
+            margin-bottom: 28px
+        &-list
+            @include txt(14px, 24px, 700)
+            color: #b9b9b9
+            display: flex
+            justify-content: center
+            gap: 44px
+            margin-bottom: 37px
+        &-property
+            list-style-type: none
+            span
+                color: #2f2f2f
+        &-price
+            @include txt(24px, 24px, 700)
+            text-transform: uppercase
+            color: $site-color-select
+            margin-bottom: 43px
+    &__filter
+        width: 537px
+        display: flex
+        gap: 53px
+        margin-bottom: 28px
+        &-item
+            display: flex
+            flex-direction: column
+            gap: 16px
+
+        &-name
+            @include txt(14px, 24px, 700)
+            text-align: left
+            color: #2f2f2f
+            text-transform: uppercase
+        &-box
+            width: 144px
+            height: 35px
+            background-color: #ffffff
+            border: 1px solid #eaeaea
+            @include txt(13px, 24px, 400)
+            color: #bcbcbc
+        &-span
+            width: 12px
+            height: 12px
+            background-color: #ef5b70
+            .red
+                background-color: #ef5b70
+            .green
+                background: #055f05
+    &__button
+        display: flex
+        align-items: center
+        gap: 15px
+        @include txt(16px, 1.2, 700)
+        color: $site-color-select
+        width: 537px
+        height: 55px
+        border: 1px solid $site-color-select
+        background-color: $text-color-select
+        justify-content: center
+        &-basket path
+            fill: $site-color-select
+        &:hover
+            background-color: $site-color-select
+            color: $text-color-select
+            transition: all 1s
+            path
+                fill: $text-color-select
+                transition: all 1s
+.card-box__filter-item 
+    option::before
+        contain: ''
+        width: 12px
+        height: 12px
+        background-color: red
+  
+    
+.catalog-singlePage
+    padding-top: 72px
+    padding-bottom: 22px
+.catalog__heading-singlePage
+    @include txt (24px , 20px , 900) 
+    text-transform: uppercase
+    color: #4d4d4d
+    text-align: center
+.catalog__items-singlePage
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(1, 1fr)
+        gap: 30px
+        padding-top: 72px

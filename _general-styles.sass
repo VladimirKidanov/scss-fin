@@ -1,0 +1,510 @@
+.top-menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100px
+    &__left
+        display: flex
+        align-items: center
+        gap: 40px
+    &__logo
+        text-decoration: none
+        display: flex
+        align-items: center
+        gap: 15px
+    &__logo-text1
+        @include txt (27px , 32px , 300)
+        color: $text-color
+        text-transform: uppercase
+        letter-spacing: 0.025em
+    &__logo-text2
+        @include txt (27px , 32px , 900)
+        color: $site-color-select
+    &__searchblock
+        display: flex
+        align-items: center
+    &__browse
+        width: 87px
+        height: 38px
+        background-color: #cdcdcc
+        border: 1px solid #e6e6e6
+        border-radius: 3px 0px 0px 3px
+        background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%)
+        padding: 7px
+        position: relative
+        summary
+            list-style: none
+            position: relative
+            cursor: pointer        
+            &::marker
+                content: none
+            &::after
+                content: ''
+                border: 7px solid transparent
+                border-top: 7px solid #838383
+                position: absolute
+                top: calc(50% + 5px)
+                right: 0
+                transform: translateY(-50%)   
+    &__browse-box
+        width: 262px        
+        background-color: #ffffff
+        border-radius: 5px 
+        padding: 0 15px 15px 15px
+        position: absolute
+        top: 40px
+        left: -2px
+        z-index: 1000
+        &::before
+            content: " "
+            display: block
+            position: absolute
+            background-color: #ffffff
+            width: 15px
+            height: 15px
+            top: -10px
+            left: 67px
+            right: auto
+            transform: rotate(45deg)
+    &__heading
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        color: #232323
+        @include txt (14px , 32px , 400)
+        border-bottom: 1px solid #e8e8e8
+        width: 100%
+        margin-bottom: 16px
+        margin-top: 16px
+    &__link
+        @include txt (14px , 28px , 400)
+        letter-spacing: 0.025em
+        color: #4f4f4f
+        display: block
+        &:hover
+            color: $site-color-select
+    &__form
+        display: flex
+        align-items: center
+    &__form-input
+        width: 277px
+        height: 38px
+        background-color: #ffffff
+        border: solid #e6e6e6
+        border-width: 1px 0px
+        @include txt (14px , 32px , 300)
+        letter-spacing: 0.025em
+        color: #a4a4a4
+        padding: 17px
+    &__search
+        width: 38px
+        height: 38px
+        border: 1px solid #e6e6e6
+        border-radius: 0px 3px 3px 0px
+        letter-spacing: 0.025em
+        color: #a4a4a4
+        background-color: #ffffff
+    &__right
+        display: flex
+        align-items: center
+        gap: 30px
+    &__cart
+        position: relative
+        z-index: 1000
+        img
+            cursor: pointer
+        &:hover .top-menu__cart-box
+            display: block
+            
+        .quantity
+            position: absolute
+            width: 19px
+            height: 19px
+            background-color: $site-color-select
+            color: $text-color-select
+            @include txt (12px , 12px , 700)
+            border-radius: 50%
+            text-align: center
+            top: -10px
+            right: -10px
+            padding-top: 3px
+        &-box
+            display: none
+            position: absolute
+            width: 262px
+            background-color: $text-color-select
+            border-radius: 5px
+            padding: 20px
+    &__product
+        display: flex
+        gap: 14px
+        border-bottom: 1px solid rgba(237,237,237,0.74)
+        width: 100%
+        padding-top: 15px
+        padding-bottom: 15px
+        justify-content: space-between
+        align-items: center
+        &-link
+            width: 72px  
+        &-img
+            height: 100%
+        &-name
+            display: block
+        &-title
+            @include txt (12px , 1.2 , 700)
+            text-transform: uppercase
+            color: $text-color
+            padding-top: 12px
+        &-grades
+            text-align: left
+            padding-top: 12px 
+            .grade
+                display: inline-block
+                vertical-align: top
+                width: 15px
+                height: 15px
+                background: linear-gradient(to bottom, #e4af48 0%, #e4af48 100%)
+                position: relative
+                clip-path: polygon(50% 0%, 66% 27%, 98% 35%, 76% 57%, 79% 91%, 50% 78%, 21% 91%, 24% 57%, 2% 35%, 32% 27%)
+                &::before
+                    content: ''
+                    position: absolute
+                    top: 1px
+                    left: 1px
+                    bottom: 1px
+                    right: 1px
+                    background: linear-gradient(to bottom, #e4af48 0%, #e4af48 100%)
+                    z-index: 1                
+                    clip-path: polygon(50% 0%, 66% 27%, 98% 35%, 76% 57%, 79% 91%, 50% 78%, 21% 91%, 24% 57%, 2% 35%, 32% 27%)
+        &-price
+            @include txt (12px , 1.2 , 400)
+            text-transform: uppercase
+            color: $site-color-select
+            padding-top: 12px
+        &-delete
+            width: 16px
+            height: 16px
+            background-color: #c0c0c0
+            color: $text-color-select
+            @include txt (10px , 1.2 , 400)
+            text-transform: uppercase
+            border-radius: 50%
+            text-align: center
+            top: -10px
+            right: -10px
+            padding-top: 3px
+    &__totalprice
+        @include txt (16px , 1.2 , 700)
+        text-transform: uppercase
+        color: $text-color
+        display: flex
+        justify-content: space-between
+        padding-top: 20px
+        padding-bottom: 20px
+    &__button-checkout
+        @include txt (14px , 1.2 , 700)
+        display: inline-block
+        border: 1px solid $site-color-select
+        background: $text-color-select
+        text-transform: uppercase
+        color: $site-color-select
+        padding: 19px 71px
+    &__button-cart
+        @include txt (14px , 1.2 , 700)
+        display: inline-block
+        border: 1px solid #eaeaea
+        background: $text-color-select
+        text-transform: uppercase
+        color: #4a4a4a
+        padding: 19px 68px
+        margin-top: 11px
+    &__button-account
+        @include txt (15px , 32px , 400)
+        letter-spacing: 0.025em
+        color: $text-color-select
+        width: 130px
+        height: 38px
+        background-color: $site-color-select
+        display: flex
+        align-items: center
+        gap: 10px
+        padding: 10px
+        border: 0px
+    &__button-span
+        border: 7px solid transparent
+        border-top: 7px solid $text-color-select
+        margin-top: 9px
+
+.main-menu
+    height: 51px
+    background-color: $text-color-select
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 50px
+    &__link
+        @include txt (14px , 26px , 700)
+        color: $text-color
+        text-transform: uppercase
+    &__list
+        position: relative
+        list-style-type: none
+        &:hover .main-menu__box
+            display: flex
+    &__box
+        background-color: #ffffff
+        border-radius: 5px
+        border: 1px solid #e8e8e8
+        padding: 20px
+        position: absolute
+        top: 32px
+        left: -220px
+        display: none
+        z-index: 1000
+        &::before
+            content: " "
+            display: block
+            position: absolute
+            background-color: #ffffff
+            width: 15px
+            height: 15px
+            top: -8px
+            left: 230px
+            right: auto
+            transform: rotate(45deg)
+            border-top: 1px solid #e8e8e8
+            border-left: 1px solid #e8e8e8       
+
+    &__item
+        margin-right: 46px
+        
+        &:last-of-type
+            margin-right: 0px
+        .intro
+            margin-top: 30px
+    &__title
+        @include txt (14px , 32px , 400)
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        color: #232323
+        padding-bottom: 8px
+        border-bottom: 1px solid #e8e8e8
+        width: 235px
+        margin-bottom: 16px
+
+    &__link-internal
+        @include txt (14px , 28px , 400)
+        text-decoration: none
+        letter-spacing: 0.025em
+        color: #646464
+        display: block
+        &:hover
+            color: $site-color-select
+    &__sale
+        width: 255px
+        margin-top: 30px
+    &__sale-link
+        display: flex
+        position: relative
+        align-items: flex-end
+        justify-content: flex-end
+    &__sale-img
+        width: 100%
+    &__sale-title
+        position: absolute
+        @include txt (22px , 28px , 900)
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        color: $text-color-select
+        padding-bottom: 10px
+        padding-right: 12px 
+.last:hover .main-menu__box
+    right: -230px
+    left: auto
+.last:hover .main-menu__box::before
+    right: 260px
+    left: auto
+
+.top-head
+    height: 148px
+    background-color: #f8f3f4
+    &__box
+       text-transform: uppercase
+       display: flex
+       justify-content: space-between
+       padding-top: 65px
+    &__namepage
+        @include txt (24px , 20px , 900)       
+        color: $site-color-select
+.breadcrumbs
+    &__ul
+        list-style-type: none
+        display: flex
+    &__li:not(:last-child)::after
+        content: '/'
+        padding-left: 5px
+        padding-right: 5px
+        @include txt (14px , 20px , 300)
+        color: $text-color-darkgrey
+    &__li:last-child .breadcrumbs__link
+        color: $site-color-select
+        font-weight: 700
+    &__link
+        @include txt (14px , 20px , 300)
+        color: $text-color-darkgrey
+        text-decoration: none
+        &:hover
+            cursor: pointer
+            color: $site-color-select
+
+
+.quote-form
+    background-image: url(image/quote_form_banner2.jpg)
+    background-repeat: no-repeat
+    height: 438px
+    background-size: cover
+    background-position: bottom 20% left
+    margin: 50px 0 50px 0
+    background-color: rgba(242,242,242,0.5)
+
+
+    &__box
+        display: flex
+        justify-content: space-around  
+        padding-top: 110px
+        gap: 165px
+    &__review        
+        display: flex
+    &__img
+        align-self: center
+        margin-right: 30px
+        float: right
+        width: 83px
+        height: 83px
+        vertical-align: top
+    &__text
+        @include txt (16px , 26px , 400)
+        font-style: italic
+        letter-spacing: 0.025em
+        color: $text-color
+    &__signature
+        padding-top: 20px 
+        letter-spacing: 0.025em
+        @include txt (16px , 26px , 700)
+        color: $site-color-select
+    &__city
+        @include txt (12px , 14px , 300)
+        color: $text-color
+    &__switch-box
+        display: flex
+        gap: 13px
+        padding-top: 40px
+    &__switch
+        width: 38px
+        height: 4px
+        background-color: #d6d6d6
+    &__subscription
+        width: 32%
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__heading
+        @include txt (24px , 54px , 400)
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        color: $text-color
+    &__explanation
+        @include txt (14px , 24px , 300)
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        color: $text-color
+        text-align: center
+        margin-bottom: 10px
+    &__email
+        display: flex
+        width: 100%
+        justify-content: center
+    &__input
+        @include txt (14px , 54px , 400)
+        opacity: 0.67
+        letter-spacing: 0.025em
+        padding-left: 22px
+        padding-right: 22px
+        width: 334px
+        height: 46px
+        background: #e1e1e1
+        border-radius: 20px 0 0 20px
+        border: none
+    &__button
+        @include txt (14px , 34px , 400)
+        width: 104px
+        height: 46px
+        background: $site-color-select
+        border-radius: 0 20px 20px 0
+        border: none
+        align-items: center
+        text-align: center
+        color: $text-color-select
+        &:hover
+            cursor: pointer
+            color: $site-color-select
+            background: $text-color-select
+            border: 1px solid $site-color-select
+            transition: background 1s, color 1s
+    
+.footer-top
+    display: flex
+    gap: 30px
+    justify-content: space-between
+    align-items: stretch
+    height: 460px
+    padding: 50px 0 50px
+    &__company 
+        display: flex
+        flex-direction: column
+        gap: 30px
+        width: 40%
+    &__text
+        @include txt (14px , 24px , 300)
+        letter-spacing: 0.025em
+        color: #898989
+    &__link-block
+        display: flex
+        flex-direction: column
+        
+    &__link-heading
+        @include txt (18px , 26px , 700)
+        letter-spacing: 0.025em
+        color: $site-color-select
+    &__link
+        @include txt (16px , 59px , 400)
+        letter-spacing: 0.025em
+        color: #898989
+        &:hover
+            color: $site-color-select
+            transition: color 0.5s
+
+.footer-bottom    
+    background-color: #e6e6e6
+    &__box
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 80px
+    &__copy
+        @include txt (16px , 42px , 400)
+        letter-spacing: 0.025em
+        color: #7a7a7a 
+    &__society
+        display: flex
+        gap: 8px
+    &__brands
+        width: 32px
+        height: 32px
+        background-color: $text-color-select        
+        text-align: center
+        vertical-align: middle
+        padding-top: 8px
+        &:hover
+            background-color: $site-color-select
+        &:hover svg path
+            fill: #f7f7f8

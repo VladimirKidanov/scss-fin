@@ -1,0 +1,101 @@
+.checkout
+    padding-top: 40px
+    padding-bottom: 40px
+    &__box
+        border-bottom: 1px solid #ebebeb
+    &__title
+        text-transform: uppercase
+        color: $text-color
+        @include txt (16px ,1.2 , 700)
+        padding-top: 30px
+        padding-bottom: 30px
+        cursor: pointer
+    &__hidden-box
+        padding-top: 10px
+        padding-bottom: 40px
+        display: none
+        justify-content: space-around
+    &__button
+        @include txt (14px , 1.2 , 700)
+        width: 180px
+        height: 50px
+        background-color:$text-color-select
+        border: 1px solid #eaeaea
+        text-transform: uppercase
+        color: $site-tcolor-darkgrey
+        text-align: center
+        margin-top: 40px
+        &:hover
+            cursor: pointer
+            color: $site-color-select
+            border-color: $site-color-select
+            transition: all 0,5s
+    &__link
+        @include txt (14px , 20px , 400)
+        padding-left: 30px
+        color: $text-color
+        &:hover
+            cursor: pointer
+            color: $site-color-select
+            transition: all 0,5s
+input[class="checkout__checkbox"]
+    display: none
+input[class="checkout__checkbox"]:checked ~ .checkout__hidden-box
+    display: flex
+
+.hidden-box
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    width: 40%
+    &__title
+        @include txt (13px , 1.2 , 400)
+        text-transform: uppercase
+        color: $text-color
+        padding-bottom: 15px
+        padding-top: 30px
+    &__text
+        @include txt (13px , 20px , 400)
+        color: #b3b2b2
+        padding-bottom: 30px
+    &__checkbox
+        display: flex
+        gap: 10px
+        text-align: center
+        padding-top: 8px
+        padding-bottom: 8px
+        input
+            padding-right: 14px
+    &__checkname
+        @include txt (12px , 20px , 400)
+        text-transform: uppercase
+        color: $text-color
+
+    &__links
+        display: flex
+        flex-direction: column
+        gap: 15px
+        padding-bottom: 15px
+        
+    &__link
+        @include txt (13px , 20px , 400)
+        color: #b3b2b2
+        span
+            @include txt (17px , 20px , 400)
+        &:hover
+            color: $site-color-select
+            cursor: pointer
+            transition: all 0,5s
+    &__required
+        @include txt (14px , 20px , 400)
+        color: #ff0d0d
+
+    &__input
+        height: 45px
+        width: 100%
+        background-color: $text-color-select
+        border: 1px solid #eaeaea
+        padding-left: 17px
+        padding-right: 17px
+        margin-top: 15px
+        margin-bottom: 23px

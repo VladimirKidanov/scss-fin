@@ -1,0 +1,253 @@
+
+.promo
+    min-height: 665px
+    background-color: $site-color
+    &__banner
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__heading_line
+        width: 12px
+        height: 98px
+        background-color: $site-color-select
+        margin-top: 12px
+    &__heading
+        line-height: normal
+        display: flex
+        align-items: center
+        gap: 15px
+    &__heading_text1
+        @include txt (60px , 1.2 , 900)
+        letter-spacing: 0.025em
+        color: $text-color
+    &__heading_text2
+        @include txt (40px , 1.2 , 900)
+        letter-spacing: 0.025em
+        color: $text-color
+    &__heading_text2>span
+        color: #F16D7F
+    &__img
+        height: 100%
+
+.project
+    margin-top: 50px
+    margin-bottom: 50px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    gap: 30px
+    &__item
+        display: flex
+        align-items: center
+        justify-content: center
+        background: rgba(33, 22, 22, 0.70)
+        &:first-child
+            grid-row: 1/3
+        &:last-child
+            grid-row: 2/4
+    &__img
+        height: 100%
+        width: 100%
+        position: relative
+        filter: brightness(80%)
+    &__item
+        display: flex
+        align-items: flex-start
+        justify-content: left
+        background: rgba(33, 22, 22, 0.70)
+        position: relative
+
+    &__text
+        top: 30px
+        min-height: 82px
+        background-color: $text-color-select
+        text-align: left
+        @include txt (18px , 1.2 , 900)
+        text-transform: uppercase
+        letter-spacing: 0.025em
+        color: $text-color
+        position: absolute
+        padding: 15px
+        span
+            color: $site-color-select
+            font-size: 30px
+
+.catalog
+    margin-top: 55px
+    margin-bottom: 55px
+    &__heading
+        @include txt (30px , 54px , 700)
+        letter-spacing: 0.025em
+        color: $text-color
+        text-align: center
+        margin-bottom: 3px
+    &__text
+        @include txt (14px , 54px , 400)
+        letter-spacing: 0.025em
+        color: #9f9f9f
+        text-align: center
+        margin-bottom: 3px
+    &__items
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        gap: 30px
+        margin-top: 48px
+        margin-bottom: 48px
+    &__button-box 
+        display: flex
+        justify-content: center
+    &__button 
+        border: 1px solid $site-color-select
+        text-decoration: none
+        @include txt (16px , normal , 700)
+        color: $site-color-select
+        text-align: center
+        display: inline-block
+        padding: 15px      
+        &:hover 
+            background: $site-color-select
+            border: 1px solid $site-color-select
+            color: $text-color-select
+            transition: all 1s
+            text-decoration: none
+
+.item
+    background: $text-color-select
+    position: relative
+    &__link
+        text-decoration: none
+        display: block
+    &__img
+        width: 100%
+    &__product
+        margin: 24px 16px
+        gap: 16px
+        display: flex
+        flex-direction: column
+    &__heading
+        color: $text-color
+        @include txt (14px , 1.2 , 400)   
+        text-transform: uppercase
+    &__price
+        color: $site-color-select
+        @include txt (16px , 1.2 , 700) 
+        text-transform: uppercase    
+    &__add
+        display: none
+        position: absolute
+        justify-content: center
+        width: 100%
+        pointer-events: none
+        top: 30%            
+    &__add-button
+        display: flex
+        text-decoration: none
+        border: 1px solid #FFFFFF
+        padding: 8px
+        justify-content: center
+        align-items: center
+        pointer-events: all    
+        &:hover        
+            box-shadow: 0 0 20px 0 #FFFFFF
+            transition: box-shadow 0.2s
+
+    &__add-basket
+        margin-right: 11px
+    &__add-text
+        @include txt (13px , 1.2 , 700) 
+        color: #FFFFFF
+    &:hover
+        box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.15)
+        transition: box-shadow 0.5s
+        .item__img
+            filter: brightness(30%)
+            transition: filter 0.5s
+        .item__add 
+            display: flex            
+
+.offer
+    display: flex
+    height: 529px
+    
+    &__banner
+        width: 80%        
+        letter-spacing: 0.025em
+        color: $text-color-select
+        display: flex
+        position: relative
+        background-color: #222224
+    &__image
+        display: flex
+        position: relative
+        width: 100%
+        height: 100%
+    &__img
+        position: relative
+        filter: brightness(80%)
+        height: 100%    
+        &-black
+            position: absolute
+            width: 100%
+            height: 100%
+    &__heading
+        display: flex
+        position: absolute
+        flex-direction: column
+        top: 140px
+        left: 50px
+        @include txt (54px , 1.2 , 700)
+    &__heading1 
+        @include txt (54px , 1.2 , 700)
+        span
+            color: $site-color-select
+    &__heading2
+        @include txt (32px , 1.2 , 700)
+    &__advantage
+        background-color: #222224
+        display: flex
+        flex-direction: column
+        justify-content: center
+        gap: 50px
+        &-box
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            svg
+                width: 70%
+        &-text
+            display: flex
+            flex-direction: column
+            gap: 15px           
+            margin-right: 50px
+            letter-spacing: 0.025em
+            color: $text-color-select
+        &-heading
+            @include txt (20px , 1.2 , 700)
+        &-description
+            @include txt (14px , 24px , 300)
+
+    background-color: #e6e6e6
+    &__box
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 80px
+    &__copy
+        @include txt (16px , 42px , 400)
+        letter-spacing: 0.025em
+        color: #7a7a7a 
+    &__society
+        display: flex
+        gap: 8px
+    &__brands
+        width: 32px
+        height: 32px
+        background-color: $text-color-select        
+        text-align: center
+        vertical-align: middle
+        padding-top: 8px
+        &:hover
+            background-color: $site-color-select
+        &:hover svg path
+            fill: #f7f7f8

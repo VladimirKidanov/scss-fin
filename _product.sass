@@ -1,0 +1,207 @@
+.product
+    display: flex
+    padding-top: 60px
+.filter-left
+    width: 234px
+    &__ul
+        list-style-type: none
+    &__title
+        border-bottom: 1px solid #ebebeb
+        display: flex
+        align-items: center
+        gap: 10px
+        cursor: pointer
+        @include txt (14px , 33px , 400)
+        color: $text-color-darkgrey
+        margin-bottom: 18px
+        position: relative
+        
+        &_line
+            width: 5px
+            height: 37px
+            background: $site-color-select
+    &__title-name
+        @include txt (14px , 20px , 700)
+        text-transform: uppercase
+        color: $text-color-darkgrey
+        
+        &::after            
+            content: ""
+            border: 7px solid transparent
+            border-top: 7px solid #838383
+            position: absolute
+            top: 35%
+            left: 90%            
+    &__list
+        list-style-type: none 
+        padding-left: 17px
+        padding-bottom: 40px
+        display: none
+    &__link
+        @include txt (14px , 33px , 400)
+        color: $text-color-darkgrey
+        &:hover
+            cursor: pointer
+            color: $site-color-select
+            transition: all 0,5s
+input[id="brand"]
+    display: none
+input[id="category"]
+    display: none
+input[id="designer"]
+    display: none
+input[type="checkbox"]:checked ~ .filter-left__list
+    display: block
+.filter-top
+    padding-left: 50px
+    &__first
+        display: flex
+        gap: 20px
+        justify-content: space-between
+    &__box
+        width: 30%
+    &__name
+        text-transform: uppercase
+        color: $text-color-darkgrey
+        @include txt (14px , 20px , 700)
+        padding-bottom: 25px
+    &__range
+        width: 100%
+        height: 22px
+        &-meaning
+            display: flex
+            justify-content: space-between
+            span
+                @include txt (14px , 26px , 400)
+                color: $text-color-darkgrey
+
+
+.trending
+    display: flex
+    flex-wrap: wrap
+    &__link
+        @include txt (14px , 26px , 400)
+        color: $text-color-darkgrey
+    &__link:not(:last-child)::after
+        content: '|'
+        padding-left: 8px
+        padding-right: 8px
+        color: #dfdfdf
+.size
+    display: flex
+    flex-wrap: wrap
+.size-check
+        display: flex
+        align-items: center
+        margin-right: 30px
+        padding-bottom: 16px
+        &__check
+            width: 13px
+            height: 13px
+            background-color: #ffffff
+            border: 1px solid #ebebeb
+            margin-right: 5px
+        &__name
+            @include txt (14px , 14px , 400)
+            color: $text-color-darkgrey
+            text-transform: uppercase
+.filter-sort
+    height: 50px
+    background-color: #f3f3f3
+    display: flex
+    align-items: center
+    gap: 10px
+    padding: 10px
+    &__box
+        @include txt (14px , 26px , 400)
+        color: $text-color-darkgrey
+        display: flex
+        select
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            border: none
+            @include txt (14px , 26px , 400)
+            color: $text-color-darkgrey   
+            width: 100px     
+            
+    &__name
+        height: 30px
+        background-color: $text-color-select
+        border: 1px solid #ebebeb
+        padding: 0 8px
+    &__select
+        height: 30px  
+        width: 100px      
+        background-color: $text-color-select
+        border-top: 1px solid #ebebeb
+        border-bottom: 1px solid #ebebeb
+        border-right: 1px solid #ebebeb
+        border-left: none
+        padding-left: 8px
+        position: relative
+        display: inline-block                    
+        &::after
+            content: ""
+            border: 7px solid transparent
+            border-top: 7px solid #838383
+            position: absolute
+            top: calc(50% + 3px)
+            right: 8px
+            transform: translateY(-50%)
+.product-catalog
+    display: grid
+    grid-template-columns: repeat(3, 1fr)    
+    gap: 30px
+    margin-top: 48px
+    margin-bottom: 48px
+
+.danuas
+    list-style: none
+    display: inline-block
+    padding: 0
+    border: 1px solid #EBEBEB
+    width: 280px
+    height: 40px
+    a
+        float: left
+        display: block
+        font-size: 16px
+        text-decoration: none
+        padding: 11px
+        color: #EBEBEB
+        margin-left: -1px
+        line-height: 19px
+    li
+        display: inline
+        text-align: center
+.deystvuyus
+    color: $site-color-select !important
+
+.danuas a.deystvuyus
+    cursor: default
+
+.danuas a:deystvuyus
+    outline: none
+
+.perva-peklucatel a:hover
+    color: $site-color-select
+.button-view
+    width: 150px
+    height: 44px
+    background-color: $text-color-select
+    border: 1px solid $site-color-select
+    border-radius: 3px
+    color: $site-color-select
+    @include txt (16px , 26px , 700)
+    cursor: pointer
+    &:hover 
+        background: $site-color-select
+        border: 1px solid $site-color-select
+        color: $text-color-select
+        transition: all 1s
+        text-decoration: none
+.product-danuas
+    display: flex
+    justify-content: space-between
+    align-items: center

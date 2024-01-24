@@ -1,0 +1,136 @@
+.shopping-cart
+    padding-top: 90px
+    &__line
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-top: 22px
+        padding-bottom: 22px   
+    &__column
+        display: flex
+        border-bottom: 1px solid #eaeaea
+        justify-content: space-between
+        &-right
+            width: 40%    
+        &-left
+            width: 60% 
+            display: flex
+            justify-content: space-between
+            text-align: left
+    &__column-name
+        @include txt (13px , 20px , 700)
+        color: $text-color
+        text-transform: uppercase
+        letter-spacing: -0.015em     
+        padding-bottom: 20px   
+    &__product
+        display: flex
+        gap: 21px
+    &__transcript
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &__title
+        @include txt (13px , 1.2 , 400)
+        text-transform: uppercase
+        padding-bottom: 20px
+        color: $text-color
+    &__text
+        @include txt (13px , 20px , 300)
+        color:  #6f6e6e
+        &-bold
+            @include txt (14px , 20px , 400)
+            color: #575757
+    &__input
+        width: 54px
+        height: 30px
+        background-color: $text-color-select
+        border: 1px solid #eaeaea
+        text-align: center
+    &__button-box
+        display: flex
+        justify-content: space-between
+        padding-top: 44px
+    &__button
+        @include txt (14px , 20px , 400)
+        text-transform: uppercase
+        color: $site-tcolor-darkgrey
+        width: 235px
+        height: 50px
+        background-color: $text-color-select 
+        border: 1px solid #eaeaea
+        &:hover
+            color: $text-color-select
+            background-color: $site-color-select
+            cursor: pointer            
+            transition: all 0.5s
+.main-form
+    display: flex
+    justify-content: space-between
+    gap: 35px
+    padding-top: 63px
+    padding-bottom: 63px
+    &__block
+        width: 30%
+        display: flex
+        flex-direction: column
+        gap: 20px
+    &__heading
+        @include txt (16px , 1.2 , 700)
+        color: $text-color
+        text-transform: uppercase
+    &__text
+        @include txt (16px , 1.2 , 700)
+        color: $text-color
+        padding-bottom: 4px
+        padding-top: 4px
+    &__input
+        width: 355px
+        height: 45px
+        background-color: $text-color-select
+        border: 1px solid #eaeaea
+        @include txt (13px , 1.2 , 300)
+        color: #b1b1b1
+        padding-left: 18px
+    &__button
+        @include txt (11px , 1.2 , 700)
+        color: $site-tcolor-darkgrey
+        text-transform: uppercase
+        padding: 12px 15px 12px 15px
+        height: 35px
+        background-color: $text-color-select
+        border: 1px solid #eaeaea
+        float: left
+        width: 120px
+        &:hover
+            background-color: $site-color-select
+            color: $text-color-select
+            transition: all 0.5s
+    &__price
+        background-color: #f5f3f3
+        text-align: right
+        height: 214px
+        padding: 40px
+        &-sub,
+        &-total
+            display: flex            
+            text-transform: uppercase
+            gap: 15px
+            justify-content: flex-end
+        &-sub
+            @include txt (11px , 1.2 , 400)
+            color: $site-tcolor-darkgrey
+        &-total
+            @include txt (16px , 1.2 , 700)
+            color: $text-color
+            border-bottom: 1px solid #e2e2e2
+            padding-bottom: 22px
+        &-totalpr
+            color: $site-color-select
+    &__price-button
+        min-height: 50px
+        background-color: $site-color-select
+        @include txt (16px , 1.2 , 700)
+        color: $text-color-select
+        text-transform: uppercase
+        border: none
